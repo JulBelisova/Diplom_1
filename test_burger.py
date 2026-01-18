@@ -24,7 +24,7 @@ class TestBurger:
         mock_bun.get_price.return_value = 50.0
 
         return mock_bun
-    
+
     @pytest.fixture
     def mock_ingredient(self):
         mock_ingredient = Mock()
@@ -78,6 +78,6 @@ class TestBurger:
         burger.add_ingredient(mock_ingredient)
         receipt = burger.get_receipt()
 
-        assert "(==== ТестБулочка ====)" in receipt  
-        assert "= мяско Бекон =" in receipt        
-        assert "Price: 200.0" in receipt  
+        assert "(==== ТестБулочка ====)" in receipt
+        assert "= мяско Бекон =" in receipt
+        assert "Price: 200.0" in receipt
