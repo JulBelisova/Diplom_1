@@ -78,6 +78,6 @@ class TestBurger:
         burger.add_ingredient(mock_ingredient)
         receipt = burger.get_receipt()
 
-        assert "(==== ТестБулочка ====)" in receipt
-        assert "= мяско Бекон =" in receipt
-        assert "Price: 200.0" in receipt
+        expected = "(==== ТестБулочка ====)\n= мяско Бекон =\n(==== ТестБулочка ====)\n\nPrice: 200.0"
+        
+        assert receipt == expected
